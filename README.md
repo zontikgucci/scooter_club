@@ -1,8 +1,8 @@
-#download
+# download
 npm i
 
-#start
+# start
 gulp
 
-#build
+# build
 gulp build
