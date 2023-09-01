@@ -1,4 +1,4 @@
-# download
+# download package
 npm i
 
 # start
