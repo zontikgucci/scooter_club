@@ -1,17 +1,253 @@
-// Обнуление
+// reset
 @import "reset";
 
-// Шрифты
-// @import "fonts";
+// fonts
+@import "fonts";
 
+// transition
+$animation-time: 0.3s;
+
+// color
+$text_black: #21201F;
+
+$gradient_preview: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), linear-gradient(90deg, #FF5C4D 0%, #EB469F 25%, #8341EF 72%, #3F68F9 100%);
+$gradient_preview_while: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+
+$price_current: #2E2C21;
+$price_current_back: radial-gradient(141.42% 141.42% at 100% 0%, #E0B8FF 0%, #B6B9FF 100%);;
+$price_previous: #808080;
+$price_back: linear-gradient(0deg, rgba(255, 255, 255, 0.63) 0%, rgba(255, 255, 255, 0.63) 100%), radial-gradient(141.42% 141.42% at 100% 0%, #E0B8FF 0%, #B6B9FF 100%);
+
+$link_back: #ffde40;
+$link_shadow: 0px 4px 98px 0px rgba(255, 222, 64, 0.59);
+$link_back_hover: #fc0;
+$link_shadow_hover: 0px 4px 98px 0px rgba(255, 204, 0, 0.59);
+
+$ellipse: #8241EF;
+// ==============================================
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: YSText;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 120%;
+  color: $text_black;
+}
+
+.container {
+  max-width: 947px;
+  margin: 0px auto;
+  padding: 0 15px;
 }
 
 
-body {}
+.body {
+  max-width: 420px;
+  position: relative;
+  z-index: 1;
 
-[class*="__container"] {}
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    margin-bottom: 48px;
+  }
+}
+
+.logo {
+  display: block;
+  width: 176px;
+  height: 50px;
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &--preview {
+    margin-bottom: 66px;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+
+.title {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 100%;
+  letter-spacing: -0.96px;
+
+  &--preview {
+    font-size: 72px;
+    letter-spacing: -1.44px;
+  }
+}
+
+.subtitle {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 120%; /* 28.8px */
+
+  &--preview  {
+    margin-bottom: 0;
+    line-height: 130%;
+  }
+}
+
+.offer {
+
+  &--preview {
+    margin-bottom: 36px;
+    line-height: 130%;
+  }
+}
+
+.price {
+  background: $price_back;
+  border-radius: 500px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 33px;
+  line-height: 120%;
+
+  &__current {
+    height: 100%;
+    padding: 0 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 500px;
+    color: $price_current;
+    background: $price_current_back;
+  }
+
+  &__previous {
+    height: 100%;
+    padding: 0 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: line-through;
+    font-size: 16px;
+    color: $price_previous;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: $text_black;
+  display: inline-flex;
+  padding: 21.5px 49px;
+  line-height: 22px;
+  align-items: center;
+  border-radius: 36px;
+  background: $link_back;
+  box-shadow: $link_shadow;
+  outline: none !important;
+  transition: background $animation-time,
+              box-shadow $animation-time;
+
+  @media (min-width: 1024px) {
+    &:hover {
+      background: $link_back_hover;
+      box-shadow: $link_shadow_hover;
+    }
+  }
+}
+
+.preview {
+  position: relative;
+
+  &__content {
+    height: 100dvh;
+    max-height: 850px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    // transition: height .2s ease linear;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background: $gradient_preview;
+    opacity: 0.22;
+    z-index: -2;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background: $gradient_preview_while;
+    z-index: -1;
+  }
+
+
+  &__art {
+    position: absolute;
+    top: 0%;
+    left: 35%;
+    width: 85%;
+    height: 100%;
+    max-width: 776px;
+  }
+
+  &__ellipse {
+    position: absolute;
+    top: 43%;
+    left: 0%;
+    display: inline-block;
+    width: 72%;
+    height: 48%;
+    background: #8241EF;
+    border-radius: 48%;
+    transform: translateY(-50%) rotate(39deg);
+    opacity: .5;
+    filter: blur(100px);
+  }
+
+  &__scooter {
+    position: absolute;
+    top: 50%;
+    display: block;
+    line-height: 0;
+    width: 100%;
+    transform: translateY(-50%);
+
+    img {
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__community {
+    position: absolute;
+    top: 49%;
+    left: 24.5%;
+    display: block;
+    line-height: 0;
+    width: 205px;
+
+    img {
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+}
 
 

@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 @@include('html/head.html', {
-	'title': 'Главная'
+	'title': 'Клуб самокатов'
 })
 <body>
-	@@include('html/header.html', {})
 	<section class="main">
-
+    <section class="preview">
+      <div class="container">
+        <div class="preview__content">
+          <a href="#" class="logo logo--preview"><img src="@img/logo_black.svg" alt="Яндекс Go"></a>
+          <div class="body">
+            <h1 class="body__title title title--preview">Вступайте в&nbsp;клуб Самокатов</h1>
+            <p class="body__subtitle subtitle subtitle--preview">Купите абонемент, чтобы стать частью клуба в&nbsp;новом сезоне&#8211;2024.</p>
+            <p class="offer offer--preview">8&nbsp;месяцев за
+              <span class="price">
+                <span class="price__current">499₽</span>
+                <span class="price__previous">3190₽</span>
+              </span>
+            </p>
+            <a href="#" class="subtitle__link link">Стать частью клуба</a>
+          </div>
+          <div class="preview__art">
+            <span class="preview__ellipse"></span>
+            <picture class="preview__scooter">
+              <img src="@img/preview/scooter.png" alt="scooter">
+            </picture>
+            <picture class="preview__community">
+              <img src="@img/community.png" alt="community">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
 	</section>
-	@@include('html/footer.html', {})
 	<script src="js/app.min.js"></script>
 </body>
 </html>
