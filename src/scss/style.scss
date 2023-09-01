@@ -31,6 +31,10 @@ $ellipse: #8241EF;
   box-sizing: border-box;
 }
 
+a {
+  outline: none !important;
+}
+
 body {
   font-family: YSText;
   font-size: 24px;
@@ -50,6 +54,7 @@ body {
   position: relative;
 }
 
+// ==================================================================
 .body {
   max-width: 420px;
   position: relative;
@@ -67,6 +72,7 @@ body {
   }
 }
 
+// ==================================================================
 .logo {
   display: block;
   width: 176px;
@@ -91,7 +97,7 @@ body {
 
 }
 
-
+// ==================================================================
 .title {
   font-size: 48px;
   font-weight: 900;
@@ -112,8 +118,22 @@ body {
       letter-spacing: -0.72px;
     }
   }
+
+  &--participation {
+    font-size: 56px;
+    letter-spacing: -1.12px;
+    max-width: 827px;
+    margin-bottom: 36px;
+
+    @media (max-width: 475px) {
+      font-size: 32px;
+      letter-spacing: -0.64px;
+      margin-bottom: 27px;
+    }
+  }
 }
 
+// ==================================================================
 .subtitle {
   font-size: 24px;
   font-weight: 500;
@@ -130,8 +150,13 @@ body {
       font-size: 18px;
     }
   }
+
+  &--participation {
+    flex: 1;
+  }
 }
 
+// ==================================================================
 .offer {
   &--preview {
     margin-bottom: 36px;
@@ -143,6 +168,7 @@ body {
   }
 }
 
+// ==================================================================
 .price {
   background: $price_back;
   border-radius: 500px;
@@ -190,6 +216,7 @@ body {
   }
 }
 
+// ==================================================================
 .link {
   text-decoration: none;
   color: $text_black;
@@ -199,8 +226,6 @@ body {
   align-items: center;
   border-radius: 36px;
   background: $link_back;
-  box-shadow: $link_shadow;
-  outline: none !important;
   // transition: background $animation-time,
   //             box-shadow $animation-time;
 
@@ -221,6 +246,7 @@ body {
   }
 
   &--preview {
+    box-shadow: $link_shadow;
     @media (max-width: 475px) {
       display: none;
     }
@@ -243,6 +269,7 @@ body {
   }
 }
 
+// ==================================================================
 .preview {
   position: relative;
 
@@ -251,13 +278,13 @@ body {
   }
 
   &__content {
-    height: 100dvh;
+    height: 100vh;
     max-height: 850px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
-    // transition: height .2s ease linear;
+
     @media (max-width: 475px) {
       display: block;
       padding-top: 32px;
@@ -314,9 +341,9 @@ body {
     @media (max-width: 475px) {
       position: relative;
       height: 265px;
-      width: 105%;
+      width: 106%;
       top: -3%;
-      left: -2%;
+      left: -3%;
     }
   }
 
@@ -376,4 +403,70 @@ body {
   }
 }
 
+// ==================================================================
+.participation {
+  overflow: hidden;
+
+  @media (max-width: 475px) {
+    padding: 0 17px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -56px;
+
+    @media (max-width: 768px) {
+      margin: 0 -30px;
+    }
+
+    @media (max-width: 702px) {
+      margin: 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin: 0 56px;
+    margin-bottom: 60px;
+    // width: calc(100% / 2 - 112px);
+    flex: 1 1 calc(100% / 2 - 112px);
+    min-width: 306px;
+
+    @media (max-width: 768px) {
+      margin: 0 30px;
+      margin-bottom: 30px;
+      flex: 1 1 calc(100% / 2 - 60px);
+    }
+
+    @media (max-width: 702px) {
+      flex-direction: row;
+      flex: 1 1 100%;
+      margin-right: 0;
+      margin-left: 0;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media (max-width: 475px) {
+      margin-bottom: 23px;
+    }
+  }
+
+  &__picture {
+    width: 83px;
+    height: 83px;
+    margin-bottom: 16px;
+
+    @media (max-width: 702px) {
+      margin-right: 16px;
+      margin-bottom: 0;
+    }
+  }
+  &__icon {
+    width: 100%;
+    object-fit: cover;
+  }
+}
 
