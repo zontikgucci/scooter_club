@@ -2,6 +2,31 @@ import * as flsFunction from './modules/function.js'
 
 flsFunction.isWebp()
 
+// Функция, которая будет вызвана, когда блок "detail" пересекается с видимой областью
+function handleIntersection(entries) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // Блок "detail" теперь видим, скрываем кнопку
+      mainLinkButton.style.opacity = "0";
+      mainLinkButton.style.pointerEvents = "none";
+    } else {
+      // Блок "detail" не видим, показываем кнопку
+      mainLinkButton.style.opacity = "1";
+      mainLinkButton.style.pointerEvents = "auto";
+    }
+  });
+}
+
+// Создаем наблюдателя за пересечением элементов
+const observer = new IntersectionObserver(handleIntersection);
+
+// Находим блок с классом "detail" и кнопку с классом "link--main"
+const detailBlock = document.querySelector(".detail");
+const mainLinkButton = document.querySelector(".link--main");
+
+// Начинаем наблюдение за блоком "detail"
+observer.observe(detailBlock);
+
 const links = document.querySelectorAll('a')
 
 links.forEach((link) => {
@@ -31,9 +56,6 @@ function slider(sectionSelector,containerSelector,
     const itemMargin = Number.isNaN(margin) ? 0 : margin // Значение margin-right из CSS
     const totalItemWidth = itemWidth + itemMargin // Общая ширина элемента с учетом маргина
     const movePosition = slideToScroll * totalItemWidth
-
-    console.log(container.clientWidth)
-    console.log(itemWidth)
 
     items.forEach((i) => i.style.minWidth = `${itemWidth}px`)
 

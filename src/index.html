@@ -4,7 +4,7 @@
 	'title': 'Клуб самокатов'
 })
 <body>
-	<section class="main">
+	<main class="main">
     <section class="preview">
       <div class="container">
         <div class="preview__content">
@@ -65,8 +65,10 @@
     </section>
     <section class="exclusive">
       <div class="container">
-        <h2 class="title title--exclusive">Эксклюзивный доступ к&nbsp;событиям Самокатов</h2>
-        <p class="subtitle subtitle--exclusive">С&nbsp;абонементом&nbsp;&mdash; у&nbsp;вас доступ к&nbsp;специальным мероприятиям, скидки и&nbsp;классный мерч. В&nbsp;2023 году мы&nbsp;танцевали на&nbsp;Даче Плюс с&nbsp;Антохой&nbsp;MC, катались на&nbsp;самокатах с&nbsp;Сергеем Мезенцевым и&nbsp;слушали хор Attaque de&nbsp;Panique</p>
+        <div class="body body--exclusive">
+          <h1 class="body__title title title--exclusive">Эксклюзивный доступ к&nbsp;событиям Самокато</h1>
+          <p class="body__subtitle subtitle subtitle--exclusive">С&nbsp;абонементом&nbsp;&mdash; у&nbsp;вас доступ к&nbsp;специальным мероприятиям, скидки и&nbsp;классный мерч. В&nbsp;2023 году мы&nbsp;танцевали на&nbsp;Даче Плюс с&nbsp;Антохой&nbsp;MC, катались на&nbsp;самокатах с&nbsp;Сергеем Мезенцевым и&nbsp;слушали хор Attaque de&nbsp;Panique</p></p>
+        </div>
         <div class="exclusive__wrapper">
           <div class="exclusive__container">
             <div class="exclusive__track">
@@ -111,8 +113,50 @@
         </div>
       </div>
     </section>
+    <section class="buy">
+      <div class="container">
+        <div class="body">
+          <h1 class="body__title title title--buy">Купить абонемент и&nbsp;вступить в&nbsp;клуб смогут&nbsp;те, кто в&nbsp;Плюсе</h1>
+          <p class="body__subtitle subtitle subtitle--buy">За&nbsp;каждую поездку на&nbsp;самокатах такие пользователи получают кешбэк баллами. Баллы можно тратить на&nbsp;поездки на&nbsp;самокатах и&nbsp;такси с&nbsp;Яндекс&nbsp;Go, покупки и&nbsp;заказы в&nbsp;других сервисах Яндекса</p>
+        </div>
+        <div class="buy__art">
+          <span class="buy__ellipse"></span>
+          <picture class="buy__scooter">
+            <img src="@img/buy/scooter.png" alt="scooter">
+          </picture>
+          <picture class="buy__plus">
+            <img src="@img/buy/plus.png" alt="plus">
+          </picture>
+        </div>
+      </div>
+    </section>
+    <section class="user">
+      <div class="container">
+        <div class="user__content">
+          <div class="body body--user">
+            <h1 class="body__title title title--user">80%&nbsp;наших пользователей уже в&nbsp;клубе и&nbsp;экономят на&nbsp;поездках</h1>
+            <p class="body__subtitle subtitle subtitle--user">Присоединяйтесь&nbsp;&mdash; опция начнёт действовать в&nbsp;начале сезона-2024. Об&nbsp;открытии сезона предупредим заранее, чтобы вы&nbsp;были готовы</p>
+            <a href="#" class="link link--user">Хочу абонемент</a>
+          </div>
+          <div class="user__art">
+            <span class="user__ellipse"></span>
+            <picture class="user__scooter">
+              <img src="@img/user/scooter.png" alt="scooter">
+            </picture>
+            <picture class="user__community">
+              <img src="@img/community.png" alt="community">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
     <a href="#" class="link link--main">Стать частью клуба</a>
-	</section>
+	</main>
+  <footer class="detail">
+    <div class="container">
+      <p class="detail__info">Доп. опция &laquo;Абонемент на&nbsp;самокаты&raquo; на&nbsp;8&nbsp;месяцев (240&nbsp;дней) активируется автоматически с&nbsp;момента старта сезона 2024&nbsp;г. самокатов Яндекс&nbsp;Go, далее предусмотрено автопродление доп.опции за&nbsp;399 руб./мес. Сертификат на&nbsp;доп.опцию &laquo;Абонемент на&nbsp;самокаты&raquo; на&nbsp;8&nbsp;месяцев оформляется на&nbsp;условиях документа <a href="yandex.ru/legal/scooters_seasonpass">yandex.ru/legal/scooters_seasonpass</a>. Доп.опция доступна пользователям с&nbsp;активной подпиской (условия подписки: <a href="yandex.ru/legal/yandex_plus_conditions">yandex.ru/legal/yandex_plus_conditions</a>), есть ограничения, подробнее: <a href="yandex.ru/legal/yandex_plus_opzii_list"></a>. В&nbsp;случае отсутствия у&nbsp;пользователя активной подписки на&nbsp;дату активации доп.опции, пользователю предоставляется 7&nbsp;дней подписки Яндекс Плюс бесплатно, далее автопродление&nbsp;&mdash; 299 руб./мес. Электросамокаты Яндекс Go&nbsp;&mdash; сервис аренды электросамокатов на&nbsp;условиях: <a href="clck.ru/gwDGn">clck.ru/gwDGn</a>. 0+</p>
+    </div>
+  </footer>
 	<script src="js/app.min.js"></script>
 </body>
 </html>
