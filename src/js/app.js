@@ -2,31 +2,28 @@ import * as flsFunction from './modules/function.js'
 
 flsFunction.isWebp()
 
-// Функция, которая будет вызвана, когда блок "detail" пересекается с видимой областью
+// Функция, котороя уберает зафиксированную кнопку не протяжении всего скоролла
 function handleIntersection(entries) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      // Блок "detail" теперь видим, скрываем кнопку
-      mainLinkButton.style.opacity = "0";
-      mainLinkButton.style.pointerEvents = "none";
+      mainLinkButton.style.opacity = "0"
+      mainLinkButton.style.pointerEvents = "none"
     } else {
-      // Блок "detail" не видим, показываем кнопку
-      mainLinkButton.style.opacity = "1";
-      mainLinkButton.style.pointerEvents = "auto";
+      mainLinkButton.style.opacity = "1"
+      mainLinkButton.style.pointerEvents = "auto"
     }
-  });
+  })
 }
 
-// Создаем наблюдателя за пересечением элементов
-const observer = new IntersectionObserver(handleIntersection);
+const observer = new IntersectionObserver(handleIntersection)
 
-// Находим блок с классом "detail" и кнопку с классом "link--main"
-const detailBlock = document.querySelector(".detail");
-const mainLinkButton = document.querySelector(".link--main");
+const detailBlock = document.querySelector(".detail")
+const mainLinkButton = document.querySelector(".link--main")
 
-// Начинаем наблюдение за блоком "detail"
-observer.observe(detailBlock);
+observer.observe(detailBlock)
 
+
+// Убрать defaul поведение ссылок
 const links = document.querySelectorAll('a')
 
 links.forEach((link) => {
@@ -35,6 +32,8 @@ links.forEach((link) => {
   })
 })
 
+
+// функция слайдера
 function slider(sectionSelector,containerSelector,
   trackSelector, itemSelector,
   prevBtnSelector, nextBtnSelector,

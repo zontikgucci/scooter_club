@@ -2,7 +2,7 @@
 npm i
 
 # start
-gulp
+gulp dev
 
 # build
 gulp build

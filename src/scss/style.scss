@@ -29,8 +29,8 @@ $ellipse: #8241EF;
 
 $exclusive_image: #DEDEDE;
 $detail: #C5C5C5;
-// ==============================================
 
+// ==============================================
 * {
   box-sizing: border-box;
 }
@@ -59,7 +59,6 @@ body {
   margin: 0px auto;
   padding: 0 15px;
 }
-
 
 .main {
   position: relative;
@@ -98,9 +97,6 @@ body {
     @media (max-width: 351px) {
       top: -71px;
     }
-    // @media (max-width: 605px) {
-    //   margin-left: 0;
-    // }
    }
 }
 
@@ -126,7 +122,6 @@ body {
       margin-bottom: 27px;
     }
   }
-
 }
 
 // ==================================================================
@@ -195,7 +190,7 @@ body {
 .subtitle {
   font-size: 24px;
   font-weight: 500;
-  line-height: 120%; /* 28.8px */
+  line-height: 120%;
 
   @media (max-width: 475px) {
     font-size: 16px;
@@ -266,7 +261,6 @@ body {
     background: $price_back_mobile;
   }
 
-
   &__current {
     height: 100%;
     padding: 0 13px;
@@ -296,7 +290,6 @@ body {
       padding: 0 4px;
       font-size: 13px;
     }
-
   }
 }
 
@@ -310,8 +303,6 @@ body {
   align-items: center;
   border-radius: 36px;
   background: $link_back;
-  // transition: background $animation-time,
-  //             box-shadow $animation-time;
 
   @media (min-width: 1024px) {
     transition: background $animation-time,
@@ -528,9 +519,7 @@ body {
     flex-direction: column;
     margin: 0 56px;
     margin-bottom: 60px;
-    // width: calc(100% / 2 - 112px);
     flex: 1 1 calc(100% / 2 - 112px);
-    // min-width: 306px;
 
     @media (max-width: 768px) {
       margin: 0 30px;
@@ -617,7 +606,6 @@ body {
       margin: 0;
       transition: all $animation-slide;
     }
-
   }
 
   &__item {
@@ -845,7 +833,6 @@ body {
     width: 100%;
     transform: translateY(-50%);
 
-   
     img {
       max-width: 100%;
       object-fit: cover;
@@ -893,10 +880,6 @@ body {
   }
 
   &__content {
-    // @media (max-width: 605px) {
-    //   display: flex;
-    //   flex-direction: column-reverse;
-    // }
     position: relative;
 
     @media (max-width: 605px) {
@@ -904,7 +887,6 @@ body {
       display: flex;
       flex-direction: column-reverse;
     }
-
   }
 
   &__art {
@@ -943,7 +925,6 @@ body {
     filter: blur(100px);
 
     @media (max-width: 768px) {
-      // width: 70%;
       left: 28%;
     }
 
@@ -966,7 +947,6 @@ body {
     line-height: 0;
 
     @media (max-width: 768px) {
-      // width: 70%;
       top: 27%;
       left: 26%;
       width: 34%;
@@ -1015,6 +995,7 @@ body {
   }
 }
 
+// ===================================================
 .detail {
   margin-bottom: 111px;
 
@@ -1029,8 +1010,6 @@ body {
     padding: 0 17px;
     margin-bottom: 39px;
   }
-
-  
 
   &__info {
     font-size: 13px;
